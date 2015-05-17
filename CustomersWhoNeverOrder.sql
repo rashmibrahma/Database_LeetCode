@@ -1,4 +1,5 @@
-Suppose that a website contains two tables, the Customers table and the Orders table. Write a SQL query to find all customers who never order anything.
+/*Suppose that a website contains two tables, the Customers table and the Orders table. 
+Write a SQL query to find all customers who never order anything.
 
 Table: Customers.
 
@@ -26,3 +27,11 @@ Using the above tables as example, return the following:
 | Henry     |
 | Max       |
 +-----------+
+*/
+
+# Write your MySQL query statement below
+SELECT Name
+FROM Customers
+WHERE Id NOT IN
+    (SELECT CustomerId
+    FROM Orders);
